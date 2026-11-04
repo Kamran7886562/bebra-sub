@@ -1893,6 +1893,23 @@
  "route": {
   "final": "proxy",
   "auto_detect_interface": true,
-  "default_domain_resolver": "local"
+  "default_domain_resolver": "local",
+  "rules": [
+   {
+    "network": [
+     "udp"
+    ],
+    "outbound": "direct"
+   },
+   {
+    "port": [
+     443
+    ],
+    "network": [
+     "udp"
+    ],
+    "outbound": "direct"
+   }
+  ]
  }
 }
