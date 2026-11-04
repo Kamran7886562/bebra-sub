@@ -1,0 +1,2138 @@
+{
+ "log": {
+  "level": "warn"
+ },
+ "dns": {
+  "servers": [
+   {
+    "type": "https",
+    "server": "1.1.1.1",
+    "tag": "dns-remote",
+    "detour": "proxy"
+   },
+   {
+    "type": "local",
+    "tag": "dns-local"
+   }
+  ],
+  "final": "dns-remote",
+  "strategy": "ipv4_only"
+ },
+ "inbounds": [
+  {
+   "type": "tun",
+   "tag": "tun-in",
+   "address": [
+    "172.19.0.1/30"
+   ],
+   "auto_route": true,
+   "strict_route": true,
+   "stack": "mixed"
+  },
+  {
+   "type": "mixed",
+   "tag": "mixed-in",
+   "listen": "127.0.0.1",
+   "listen_port": 2080
+  }
+ ],
+ "outbounds": [
+  {
+   "type": "selector",
+   "tag": "proxy",
+   "outbounds": [
+    "auto",
+    "Fastest_Location___VLESS-REALITY_1",
+    "Fastest_Location___VLESS-REALITY_2",
+    "Fastest_Location___VLESS-REALITY_3",
+    "Fastest_Location___VLESS-REALITY_4",
+    "Fastest_Location___VLESS-REALITY_5",
+    "Fastest_Location___VLESS-REALITY_6",
+    "Fastest_Location___VLESS-REALITY_7",
+    "Austria_Vienna___VLESS-REALITY_1",
+    "Austria_Vienna___VLESS-REALITY_2",
+    "Austria_Vienna___VLESS-REALITY_6",
+    "Afghanistan_Kabul___VLESS-REALITY_1",
+    "Afghanistan_Kabul___VLESS-REALITY_2",
+    "Afghanistan_Kabul___VLESS-REALITY_6",
+    "Albania_Tirana___VLESS-REALITY_2",
+    "Albania_Tirana___VLESS-REALITY_6",
+    "Algeria_Algiers___VLESS-REALITY_1",
+    "Algeria_Algiers___VLESS-REALITY_6",
+    "Andorra___VLESS-REALITY_6",
+    "Angola_Luanda___VLESS-REALITY_1",
+    "Angola_Luanda___VLESS-REALITY_2",
+    "Angola_Luanda___VLESS-REALITY_6",
+    "Argentina_Buenos_Aires___VLESS-REALITY_1",
+    "Argentina_Buenos_Aires___VLESS-REALITY_2",
+    "Argentina_Buenos_Aires___VLESS-REALITY_6",
+    "Armenia_Yerevan___VLESS-REALITY_2",
+    "Armenia_Yerevan___VLESS-REALITY_6",
+    "Aruba_Oranjestad___VLESS-REALITY_1",
+    "Aruba_Oranjestad___VLESS-REALITY_2",
+    "Australia_Sydney___VLESS-REALITY_1",
+    "Australia_Sydney___VLESS-REALITY_2",
+    "Australia_Sydney___VLESS-REALITY_6",
+    "Azerbaijan_Baku___VLESS-REALITY_6",
+    "Bahamas_Nassau___VLESS-REALITY_6",
+    "Bahrain_Manama___VLESS-REALITY_1",
+    "Bahrain_Manama___VLESS-REALITY_2",
+    "Bahrain_Manama___VLESS-REALITY_6",
+    "Bangladesh_Dhaka___VLESS-REALITY_1",
+    "Bangladesh_Dhaka___VLESS-REALITY_6",
+    "Barbados_Bridgetown___VLESS-REALITY_2",
+    "Barbados_Bridgetown___VLESS-REALITY_6",
+    "Belarus_Minsk___VLESS-REALITY_1",
+    "Belarus_Minsk___VLESS-REALITY_2",
+    "Belarus_Minsk___VLESS-REALITY_6",
+    "Belgium_Brussels___VLESS-REALITY_1",
+    "Belgium_Brussels___VLESS-REALITY_2",
+    "Benin_Cotonou___VLESS-REALITY_6",
+    "Bhutan_Timphu___VLESS-REALITY_1",
+    "Bolivia_La_Paz___VLESS-REALITY_1",
+    "Bolivia_La_Paz___VLESS-REALITY_2",
+    "Bolivia_La_Paz___VLESS-REALITY_6",
+    "Brazil_Sao_Paulo___VLESS-REALITY_2",
+    "Brazil_Sao_Paulo___VLESS-REALITY_6",
+    "British_Virgin_Islands_Road_Town___VLESS-REALITY_6",
+    "Brunei___VLESS-REALITY_1",
+    "Brunei___VLESS-REALITY_6",
+    "Burkina_Faso_Ouagadougou___VLESS-REALITY_2",
+    "Burkina_Faso_Ouagadougou___VLESS-REALITY_6",
+    "Cambodia_Phnom_Penh___VLESS-REALITY_6",
+    "Cameroon_Yaounde___VLESS-REALITY_2",
+    "Cape_Verde_Praia___VLESS-REALITY_1",
+    "Cayman_Islands___VLESS-REALITY_6",
+    "Chile_Santiago___VLESS-REALITY_6",
+    "China_Zhengzhou___VLESS-REALITY_1",
+    "China_Zhengzhou___VLESS-REALITY_6",
+    "Comoros_Moroni___VLESS-REALITY_6",
+    "Congo_Brazzaville___VLESS-REALITY_6",
+    "Croatia_Zagreb___VLESS-REALITY_6",
+    "Cyprus_Limassol___VLESS-REALITY_6",
+    "Denmark_Copenhagen___VLESS-REALITY_2",
+    "Estonia_Tallin___VLESS-REALITY_1",
+    "France_Marseille___VLESS-REALITY_6",
+    "Gambia_Banjul___VLESS-REALITY_6",
+    "Germany_Frankfurt___VLESS-REALITY_6",
+    "Greenland_Nuuk___VLESS-REALITY_6",
+    "Guadeloupe_BasseTerre___VLESS-REALITY_1",
+    "Guyana_Linden___VLESS-REALITY_6",
+    "Hong_Kong___VLESS-REALITY_2",
+    "Jamaica_Kingston___VLESS-REALITY_6",
+    "Kenya_Nairobi___VLESS-REALITY_6",
+    "Kosovo_Pristina___VLESS-REALITY_6",
+    "Lithuania_Vilnius___VLESS-REALITY_6",
+    "Macedonia_Skopje___VLESS-REALITY_6",
+    "Mauritania_Nouakchott___VLESS-REALITY_6",
+    "Mongolia_Ulaanbaatar___VLESS-REALITY_6",
+    "New_Caledonia_Noumea___VLESS-REALITY_6",
+    "Nicaragua_Managua___VLESS-REALITY_6",
+    "Palestine_Ramallah___VLESS-REALITY_6",
+    "Russia_Moscow___VLESS-REALITY_6",
+    "South_Sudan_Juba___VLESS-REALITY_6",
+    "Switzerland_Zurich___VLESS-REALITY_6"
+   ],
+   "default": "auto"
+  },
+  {
+   "type": "urltest",
+   "tag": "auto",
+   "outbounds": [
+    "Fastest_Location___VLESS-REALITY_1",
+    "Fastest_Location___VLESS-REALITY_2",
+    "Fastest_Location___VLESS-REALITY_3",
+    "Fastest_Location___VLESS-REALITY_4",
+    "Fastest_Location___VLESS-REALITY_5",
+    "Fastest_Location___VLESS-REALITY_6",
+    "Fastest_Location___VLESS-REALITY_7",
+    "Austria_Vienna___VLESS-REALITY_1",
+    "Austria_Vienna___VLESS-REALITY_2",
+    "Austria_Vienna___VLESS-REALITY_6",
+    "Afghanistan_Kabul___VLESS-REALITY_1",
+    "Afghanistan_Kabul___VLESS-REALITY_2",
+    "Afghanistan_Kabul___VLESS-REALITY_6",
+    "Albania_Tirana___VLESS-REALITY_2",
+    "Albania_Tirana___VLESS-REALITY_6",
+    "Algeria_Algiers___VLESS-REALITY_1",
+    "Algeria_Algiers___VLESS-REALITY_6",
+    "Andorra___VLESS-REALITY_6",
+    "Angola_Luanda___VLESS-REALITY_1",
+    "Angola_Luanda___VLESS-REALITY_2",
+    "Angola_Luanda___VLESS-REALITY_6",
+    "Argentina_Buenos_Aires___VLESS-REALITY_1",
+    "Argentina_Buenos_Aires___VLESS-REALITY_2",
+    "Argentina_Buenos_Aires___VLESS-REALITY_6",
+    "Armenia_Yerevan___VLESS-REALITY_2",
+    "Armenia_Yerevan___VLESS-REALITY_6",
+    "Aruba_Oranjestad___VLESS-REALITY_1",
+    "Aruba_Oranjestad___VLESS-REALITY_2",
+    "Australia_Sydney___VLESS-REALITY_1",
+    "Australia_Sydney___VLESS-REALITY_2",
+    "Australia_Sydney___VLESS-REALITY_6",
+    "Azerbaijan_Baku___VLESS-REALITY_6",
+    "Bahamas_Nassau___VLESS-REALITY_6",
+    "Bahrain_Manama___VLESS-REALITY_1",
+    "Bahrain_Manama___VLESS-REALITY_2",
+    "Bahrain_Manama___VLESS-REALITY_6",
+    "Bangladesh_Dhaka___VLESS-REALITY_1",
+    "Bangladesh_Dhaka___VLESS-REALITY_6",
+    "Barbados_Bridgetown___VLESS-REALITY_2",
+    "Barbados_Bridgetown___VLESS-REALITY_6",
+    "Belarus_Minsk___VLESS-REALITY_1",
+    "Belarus_Minsk___VLESS-REALITY_2",
+    "Belarus_Minsk___VLESS-REALITY_6",
+    "Belgium_Brussels___VLESS-REALITY_1",
+    "Belgium_Brussels___VLESS-REALITY_2",
+    "Benin_Cotonou___VLESS-REALITY_6",
+    "Bhutan_Timphu___VLESS-REALITY_1",
+    "Bolivia_La_Paz___VLESS-REALITY_1",
+    "Bolivia_La_Paz___VLESS-REALITY_2",
+    "Bolivia_La_Paz___VLESS-REALITY_6",
+    "Brazil_Sao_Paulo___VLESS-REALITY_2",
+    "Brazil_Sao_Paulo___VLESS-REALITY_6",
+    "British_Virgin_Islands_Road_Town___VLESS-REALITY_6",
+    "Brunei___VLESS-REALITY_1",
+    "Brunei___VLESS-REALITY_6",
+    "Burkina_Faso_Ouagadougou___VLESS-REALITY_2",
+    "Burkina_Faso_Ouagadougou___VLESS-REALITY_6",
+    "Cambodia_Phnom_Penh___VLESS-REALITY_6",
+    "Cameroon_Yaounde___VLESS-REALITY_2",
+    "Cape_Verde_Praia___VLESS-REALITY_1",
+    "Cayman_Islands___VLESS-REALITY_6",
+    "Chile_Santiago___VLESS-REALITY_6",
+    "China_Zhengzhou___VLESS-REALITY_1",
+    "China_Zhengzhou___VLESS-REALITY_6",
+    "Comoros_Moroni___VLESS-REALITY_6",
+    "Congo_Brazzaville___VLESS-REALITY_6",
+    "Croatia_Zagreb___VLESS-REALITY_6",
+    "Cyprus_Limassol___VLESS-REALITY_6",
+    "Denmark_Copenhagen___VLESS-REALITY_2",
+    "Estonia_Tallin___VLESS-REALITY_1",
+    "France_Marseille___VLESS-REALITY_6",
+    "Gambia_Banjul___VLESS-REALITY_6",
+    "Germany_Frankfurt___VLESS-REALITY_6",
+    "Greenland_Nuuk___VLESS-REALITY_6",
+    "Guadeloupe_BasseTerre___VLESS-REALITY_1",
+    "Guyana_Linden___VLESS-REALITY_6",
+    "Hong_Kong___VLESS-REALITY_2",
+    "Jamaica_Kingston___VLESS-REALITY_6",
+    "Kenya_Nairobi___VLESS-REALITY_6",
+    "Kosovo_Pristina___VLESS-REALITY_6",
+    "Lithuania_Vilnius___VLESS-REALITY_6",
+    "Macedonia_Skopje___VLESS-REALITY_6",
+    "Mauritania_Nouakchott___VLESS-REALITY_6",
+    "Mongolia_Ulaanbaatar___VLESS-REALITY_6",
+    "New_Caledonia_Noumea___VLESS-REALITY_6",
+    "Nicaragua_Managua___VLESS-REALITY_6",
+    "Palestine_Ramallah___VLESS-REALITY_6",
+    "Russia_Moscow___VLESS-REALITY_6",
+    "South_Sudan_Juba___VLESS-REALITY_6",
+    "Switzerland_Zurich___VLESS-REALITY_6"
+   ],
+   "url": "https://www.gstatic.com/generate_204",
+   "interval": "3m",
+   "tolerance": 50
+  },
+  {
+   "type": "vless",
+   "tag": "Fastest_Location___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "trl70564afadd01.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "dc124373ff9327cf"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Fastest_Location___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "liwfd17357b0ace.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "2efb808bd59f0366"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Fastest_Location___VLESS-REALITY_3",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "80d36b0c-dad2-40a1-9716-f42cb1177355",
+   "tls": {
+    "enabled": true,
+    "server_name": "www.paypal.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "chrome"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "G4lO8585OTqjlGWrEf_l4Qq47AdXsU_DrsWVyWE6FWo",
+     "short_id": "931489a2"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Fastest_Location___VLESS-REALITY_4",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "72a5bcbb-e2f8-4fe5-8d47-f3aff5cd8137",
+   "tls": {
+    "enabled": true,
+    "server_name": "www.nvidia.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "chrome"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "DBqWKzw_sOV_bzd39HC37rZm_AFGyJBBR4mfA_wGL1k",
+     "short_id": "80c7a264"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Fastest_Location___VLESS-REALITY_5",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "b48ba842-48d9-4ec0-9041-5c429ba043af",
+   "tls": {
+    "enabled": true,
+    "server_name": "www.samsung.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "chrome"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "96dPnoDUhSUQ9U4H8WmU-mYXGIAPj3CEuLiS2fEvt2U",
+     "short_id": "cc34cd57"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Fastest_Location___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "u.corp.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "nYrWjkzhBoGSNusIv7c-32q9M3-CmUcZRQT7WKURL0Y",
+     "short_id": "b0714e4df864209c"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Fastest_Location___VLESS-REALITY_7",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "94042937-4727-48d6-9998-d803fa22bab0",
+   "tls": {
+    "enabled": true,
+    "server_name": "www.icloud.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "chrome"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "Gelrzak16D1Sh_vNMMFB9a8BvDbqnPhoP8lbs5p7qVE",
+     "short_id": "f78a6736"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Austria_Vienna___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "ar623942ff757e6.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "498103294acc244a"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Austria_Vienna___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "hkx192d7764a82b.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "3c9c5d01c6f824dd"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Austria_Vienna___VLESS-REALITY_6",
+   "server": "node6.frost-api.com",
+   "server_port": 443,
+   "uuid": "0954bb62-5848-459d-8809-6305dcded5f5",
+   "tls": {
+    "enabled": true,
+    "server_name": "api-maps.yandex.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+     "short_id": "e7"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Afghanistan_Kabul___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "imu7c6e38296814.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "2f3e735aedc55aaf"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Afghanistan_Kabul___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "d97ba9daba9f966.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "af2bebede7320b3e"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Afghanistan_Kabul___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "g75b603a4e4e682.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "3c9c5d01c6f824dd"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Albania_Tirana___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "s73aebb7393bd2a.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "7e77e7e2cf2b7a79"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Albania_Tirana___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "atvd47237e74da9.webmoney.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "d6816b10d545df54"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Algeria_Algiers___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "imr46605e355dc2.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "299a6ca1f217c457"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Algeria_Algiers___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0954bb62-5848-459d-8809-6305dcded5f5",
+   "tls": {
+    "enabled": true,
+    "server_name": "api-maps.yandex.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+     "short_id": "e7"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Andorra___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "im88b4ee299797e.webmoney.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "2efb808bd59f0366"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Angola_Luanda___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "sp24fd22598c3a4.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "42e51b053eec3700"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Angola_Luanda___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "lid433c87abc2ec.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "cd5d72100116f1c3"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Angola_Luanda___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "viw94956a3bb434.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "d08bb54b5b94b2fc"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Argentina_Buenos_Aires___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "kz28d3773471049.webmoney.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "df5f7ec1de636bbb"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Argentina_Buenos_Aires___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "apy1fc4f4e9b546.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "2f3e735aedc55aaf"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Argentina_Buenos_Aires___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "chm1ae02213b273.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "7e77e7e2cf2b7a79"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Armenia_Yerevan___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "ar8c585eaf69303.webmoney.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "100b884efd3d2c4a"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Armenia_Yerevan___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 5883,
+   "uuid": "0954bb62-5848-459d-8809-6305dcded5f5",
+   "tls": {
+    "enabled": true,
+    "server_name": "google.fr",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+     "short_id": "e7"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Aruba_Oranjestad___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "fef6a4f6cb8e20a.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "a150d81117ad570a"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Aruba_Oranjestad___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "s9r96facc299698.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "0dc0ced5bf4f756c"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Australia_Sydney___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "as0de8a1b28027f.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "04c9b77ed330452d"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Australia_Sydney___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "fi76ca78590c044.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "99e78ee91698aaaa"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Australia_Sydney___VLESS-REALITY_6",
+   "server": "234604.aib2bsas.online",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "navigation.maps.yandex.net",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "ObdaDJ1-OGV8eq3pV3uw7CX1LR9snkN9YDkaCqfxtik",
+     "short_id": "d52706e0677ceb7d"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Azerbaijan_Baku___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "7d490490-2305-4e10-be3e-248147beb0e1",
+   "tls": {
+    "enabled": true,
+    "server_name": "154.84.164.144",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "3u61EuWQeCI_TA0B6sXi573fcSdoHKtBSV9Wuqdn3Uk",
+     "short_id": "5e4419c4a947606a"
+    }
+   }
+  },
+  {
+   "type": "vless",
+   "tag": "Bahamas_Nassau___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "g7ab34c4104b3bb.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "a89a85c1f51bb525"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Bahrain_Manama___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "fih71a4cfd7bc7a.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "df5f7ec1de636bbb"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Bahrain_Manama___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "nln0c3a68182032.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "42e51b053eec3700"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Bahrain_Manama___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "dev1.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "JjHZYImPLSxYd-hVQ-jazFoAGoveZeb74nNFLH5dAnI",
+     "short_id": "9b272b275a043c2e"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Bangladesh_Dhaka___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "gb585904b59076b.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "99e78ee91698aaaa"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Bangladesh_Dhaka___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "api.predict.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "r3LWtIVIAzCZoRM7tSlM7akmgCDcYpMtmvfISlS4oWc",
+     "short_id": "dccb92bdaad0309f"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Barbados_Bridgetown___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "nlc3f1ee6b12b15.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "9a247b7e6a16b2a1"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Barbados_Bridgetown___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "tr14a2de12ec57b.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "55e6d9bd269aac46"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Belarus_Minsk___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "feadfa57f15f65f.webmoney.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "cd5d72100116f1c3"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Belarus_Minsk___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "paza50fdee98e84.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "a150d81117ad570a"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Belarus_Minsk___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "tamtam.chat",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "dQX4kiGNJiB7zrun7Fx3ZYN447_IRaPHlVm1ysM2lBY",
+     "short_id": "06e7750772bb8266"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Belgium_Brussels___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "vib02b38ce8d9ee.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "2f3e735aedc55aaf"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Belgium_Brussels___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "trr3d2fa2332ea7.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "9a247b7e6a16b2a1"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Benin_Cotonou___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "d7l515f4b99e2b6.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "2f3e735aedc55aaf"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Bhutan_Timphu___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "gmq024cd027080b.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "42e51b053eec3700"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Bolivia_La_Paz___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "gdgcfd082b3b524.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "99e78ee91698aaaa"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Bolivia_La_Paz___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "tv6da5f59b81839.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "69da7557f168a46a"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Bolivia_La_Paz___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "gibdd.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "DyaJbQTstATDS6roBW3zGNndY4NmGmGiO0Nxr-pD4gU",
+     "short_id": "0fc70dbefc1e5edb"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Brazil_Sao_Paulo___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "hec5f487204d3ff.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "9a247b7e6a16b2a1"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Brazil_Sao_Paulo___VLESS-REALITY_6",
+   "server": "pl-1-1.tarkovrip-pk.fun",
+   "server_port": 443,
+   "uuid": "289c0620-c65b-40aa-8bd8-98c4d19eb800",
+   "tls": {
+    "enabled": true,
+    "server_name": "pl-1-1.tarkovrip-pk.fun",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg",
+     "short_id": ""
+    }
+   }
+  },
+  {
+   "type": "vless",
+   "tag": "British_Virgin_Islands_Road_Town___VLESS-REALITY_6",
+   "server": "old.sweptmerjem.org",
+   "server_port": 443,
+   "uuid": "191edd9f-ea76-4897-8b40-019d842b30c9",
+   "tls": {
+    "enabled": true,
+    "server_name": "www.asus.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "chrome"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "jsiqU2Rg-F0S5R9HlwPDlFmB4s7A0ArK5A2oCUlH5i8",
+     "short_id": "448a178bfe99"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Brunei___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "g5w4fcf2308b37d.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "c7e42004e5f024be"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Brunei___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "g65db024b14f506.webmoney.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "e1d75c3d43f85999"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Burkina_Faso_Ouagadougou___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "s4l27e7b5af7d1b.webmoney.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "69da7557f168a46a"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Burkina_Faso_Ouagadougou___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "aw.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "k6rz_-vWxwgMf8VwXhW0mksond9nH7fEzfcqIp-8kk4",
+     "short_id": "3f7d2acf2f6da6bd"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Cambodia_Phnom_Penh___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "gpb.finance.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "-q97GmwI_UXqbG2u5IMWjXz8fgOg_yDfZA9yQqWj6mc",
+     "short_id": "da3f446771dea2de"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Cameroon_Yaounde___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "d3407e0113458cf.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "5784c337fe1cbb05"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Cape_Verde_Praia___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "g9e79b89b643110.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "abe4a59b9f2407e3"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Cayman_Islands___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "townwars.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "0tTVSDFx38GghBBU2CtojH8T8mfr18Wrr6JXA5lVjVY",
+     "short_id": "445b02112f338c86"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Chile_Santiago___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "ca799a671703ae9.webmoney.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "abe4a59b9f2407e3"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "China_Zhengzhou___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "cag798870ace3de.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "99e78ee91698aaaa"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "China_Zhengzhou___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "fc74b7b8-14e5-42be-b472-1cdd4d1bc892",
+   "tls": {
+    "enabled": true,
+    "server_name": "deepl.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "qq"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "GwjzHvbNB5Wn6Jj7E3WSc5pc32bjeJCvv9yf0ibDnRs",
+     "short_id": "15affa0af66dfc79"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Comoros_Moroni___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "cups.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "ORFKlz-2ycrEzhqrILJHADpdAtEIBtkTIMz7XWW2MDM",
+     "short_id": "5d1f22459b4e9a3a"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Congo_Brazzaville___VLESS-REALITY_6",
+   "server": "us-1-1.tarkovrip-pk.fun",
+   "server_port": 443,
+   "uuid": "289c0620-c65b-40aa-8bd8-98c4d19eb800",
+   "tls": {
+    "enabled": true,
+    "server_name": "us-1-1.tarkovrip-pk.fun",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg",
+     "short_id": ""
+    }
+   }
+  },
+  {
+   "type": "vless",
+   "tag": "Croatia_Zagreb___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "www.biz.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "zrKZwkypVvTg2qwqg3cY_Y0MdBwDfenxVCDVNeyBI1Q",
+     "short_id": "446550858cc64123"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Cyprus_Limassol___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "gb9791450e2820b.inn.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "55e6d9bd269aac46"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Denmark_Copenhagen___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "up593b65f2409bc.webmoney.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "0dc0ced5bf4f756c"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Estonia_Tallin___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "tby6f3f7ea646cd.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "2efb808bd59f0366"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "France_Marseille___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "combu.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "tG_N47Tmpu9e2kBdiDhoWvMDdpbFlCq4GqfvFvlNhlo",
+     "short_id": "2be00d952545a618"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Gambia_Banjul___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "imperia.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "2NtvNsBpKxbXdM10sXCDOedKkdZ3gwAs3WUnwqbv5Hs",
+     "short_id": "db8f0dbb1308ce69"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Germany_Frankfurt___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "staging-esc.predict.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "dQX4kiGNJiB7zrun7Fx3ZYN447_IRaPHlVm1ysM2lBY",
+     "short_id": "71e9806e2b4c6958"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Greenland_Nuuk___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 6002,
+   "uuid": "0954bb62-5848-459d-8809-6305dcded5f5",
+   "tls": {
+    "enabled": true,
+    "server_name": "ads.x5.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "qq"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+     "short_id": "e7"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Guadeloupe_BasseTerre___VLESS-REALITY_1",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "d4m0448dcbc1179.fastpic.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "3c9c5d01c6f824dd"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Guyana_Linden___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "gmsbdeea6227a74.steampowered.com",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "df5f7ec1de636bbb"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Hong_Kong___VLESS-REALITY_2",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "8c5b9aa7-8755-4ca3-94df-eccf14abed84",
+   "tls": {
+    "enabled": true,
+    "server_name": "nll3aff7b0404f2.webmoney.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+     "short_id": "55e6d9bd269aac46"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Jamaica_Kingston___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "stand.cb.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "h58QamOIqDou70WaOwo_X22rO-CMA_gZ6SxSRAdmLg4",
+     "short_id": "3ef679d5b336ed59"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Kenya_Nairobi___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "otvety.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "chrome"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "wbtr_JuN9J6aAqvSJp2JtMGbBMQ4Pl_wH0eVKlKBCGw",
+     "short_id": "17b18d1a6ff6c0ac"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Kosovo_Pristina___VLESS-REALITY_6",
+   "server": "263160.aib2bsas.online",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "navigation.maps.yandex.net",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "r3LWtIVIAzCZoRM7tSlM7akmgCDcYpMtmvfISlS4oWc",
+     "short_id": "12d945ea6f5bb6f1"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Lithuania_Vilnius___VLESS-REALITY_6",
+   "server": "de-gdd-1.tarkovrip-pk.fun",
+   "server_port": 443,
+   "uuid": "289c0620-c65b-40aa-8bd8-98c4d19eb800",
+   "tls": {
+    "enabled": true,
+    "server_name": "de-gdd-1.tarkovrip-pk.fun",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg",
+     "short_id": ""
+    }
+   }
+  },
+  {
+   "type": "vless",
+   "tag": "Macedonia_Skopje___VLESS-REALITY_6",
+   "server": "nl-1-3.tarkovrip-pk.fun",
+   "server_port": 443,
+   "uuid": "289c0620-c65b-40aa-8bd8-98c4d19eb800",
+   "tls": {
+    "enabled": true,
+    "server_name": "nl-1-3.tarkovrip-pk.fun",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg",
+     "short_id": ""
+    }
+   }
+  },
+  {
+   "type": "vless",
+   "tag": "Mauritania_Nouakchott___VLESS-REALITY_6",
+   "server": "ee-1-1.tarkovrip-pk.fun",
+   "server_port": 443,
+   "uuid": "289c0620-c65b-40aa-8bd8-98c4d19eb800",
+   "tls": {
+    "enabled": true,
+    "server_name": "ee-1-1.tarkovrip-pk.fun",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg",
+     "short_id": ""
+    }
+   }
+  },
+  {
+   "type": "vless",
+   "tag": "Mongolia_Ulaanbaatar___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "tiles.maps.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "aIccmJzVSmtgQbNjTMPPm88BTb39llloNV-y2hyltAM",
+     "short_id": "05f36f95d0418012"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "New_Caledonia_Noumea___VLESS-REALITY_6",
+   "server": "node3.frost-api.com",
+   "server_port": 443,
+   "uuid": "0954bb62-5848-459d-8809-6305dcded5f5",
+   "tls": {
+    "enabled": true,
+    "server_name": "max.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "chrome"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+     "short_id": "e7"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Nicaragua_Managua___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "amigo.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "rWRM2cPptEBzNrJ0UGmTJ5yzE7jzDueFBG7N26IQ6Bw",
+     "short_id": "89591b85d5a04e32"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Palestine_Ramallah___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "otvet.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "KIcDFvV5yAPDS2cMYMYu5iJ3qCzbzpDw37DEOQ-KJFc",
+     "short_id": "e0c74181593233af"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Russia_Moscow___VLESS-REALITY_6",
+   "server": "se-1-3.tarkovrip-pk.fun",
+   "server_port": 443,
+   "uuid": "289c0620-c65b-40aa-8bd8-98c4d19eb800",
+   "tls": {
+    "enabled": true,
+    "server_name": "se-1-3.tarkovrip-pk.fun",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg",
+     "short_id": ""
+    }
+   }
+  },
+  {
+   "type": "vless",
+   "tag": "South_Sudan_Juba___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "cobma.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "3L3i_4b1jo-cCwx3TwIEjjOxQIMm6ysblH3AvTlvgBk",
+     "short_id": "e237ebeb055e5ef0"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "vless",
+   "tag": "Switzerland_Zurich___VLESS-REALITY_6",
+   "server": "154.84.164.144",
+   "server_port": 8443,
+   "uuid": "0bfe677e-89a7-4601-bff3-783e4969a007",
+   "tls": {
+    "enabled": true,
+    "server_name": "cog.mail.ru",
+    "utls": {
+     "enabled": true,
+     "fingerprint": "firefox"
+    },
+    "reality": {
+     "enabled": true,
+     "public_key": "a4E6GoR8p4OH_5ktTgRgdJfhS98lbTCzmf_B0JdgOT8",
+     "short_id": "66c41d995b3c3b9d"
+    }
+   },
+   "flow": "xtls-rprx-vision"
+  },
+  {
+   "type": "direct",
+   "tag": "direct"
+  }
+ ],
+ "route": {
+  "rules": [
+   {
+    "action": "sniff"
+   },
+   {
+    "protocol": "dns",
+    "action": "hijack-dns"
+   }
+  ],
+  "final": "proxy",
+  "auto_detect_interface": true
+ }
+}
