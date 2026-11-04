@@ -2999,6 +2999,11 @@
   "rules": [
    {
     "type": "field",
+    "network": "udp",
+    "outboundTag": "direct"
+   },
+   {
+    "type": "field",
     "network": "tcp,udp",
     "balancerTag": "auto"
    }
