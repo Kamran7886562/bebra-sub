@@ -1,0 +1,146 @@
+{
+ "log": {
+  "loglevel": "warning"
+ },
+ "dns": {
+  "servers": [
+   "1.1.1.1",
+   "8.8.8.8"
+  ],
+  "queryStrategy": "UseIPv4"
+ },
+ "inbounds": [],
+ "outbounds": [
+  {
+   "tag": "🇺🇸 Comet GW1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "tag": "🇺🇸 Comet GW2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "tag": "🇺🇸 Comet GW3",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "tag": "🇺🇸 Comet GW4",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "tag": "🇺🇸 Comet GW5",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom"
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "balancers": [
+   {
+    "tag": "auto",
+    "selector": [
+     "🇺🇸 Comet GW1",
+     "🇺🇸 Comet GW2",
+     "🇺🇸 Comet GW3",
+     "🇺🇸 Comet GW4",
+     "🇺🇸 Comet GW5"
+    ],
+    "strategy": {
+     "type": "leastPing"
+    }
+   }
+  ],
+  "rules": [
+   {
+    "type": "field",
+    "network": "tcp,udp",
+    "balancerTag": "auto"
+   }
+  ]
+ },
+ "observatory": {
+  "subjectSelector": [
+   "🇺🇸 Comet GW1",
+   "🇺🇸 Comet GW2",
+   "🇺🇸 Comet GW3",
+   "🇺🇸 Comet GW4",
+   "🇺🇸 Comet GW5"
+  ],
+  "probeURL": "https://www.gstatic.com/generate_204",
+  "probeInterval": "3m",
+  "enableConcurrency": true
+ }
+}
