@@ -1,0 +1,3070 @@
+{
+ "log": {
+  "loglevel": "warning"
+ },
+ "dns": {
+  "servers": [
+   "1.1.1.1",
+   "8.8.8.8"
+  ],
+  "queryStrategy": "UseIPv4"
+ },
+ "inbounds": [],
+ "outbounds": [
+  {
+   "tag": "in-Sydney-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "sydney-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Sydney-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Sydney-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Sydney-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "sydney-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Sydney-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Sydney-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Melbourne-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "melbourne-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Melbourne-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Melbourne-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Melbourne-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "melbourne-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Melbourne-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Melbourne-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Sao-Paulo-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "sao-paulo-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Sao-Paulo-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Sao-Paulo-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Sao-Paulo-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "sao-paulo-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Sao-Paulo-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Sao-Paulo-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Toronto-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "toronto-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Toronto-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Toronto-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Toronto-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "toronto-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Toronto-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Toronto-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Santiago-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "santiago-node-1.cloudwidecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Santiago-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Santiago-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Paris-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "paris-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Paris-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Paris-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Paris-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "paris-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Paris-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Paris-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Frankfurt-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "frankfurt-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Frankfurt-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Frankfurt-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Frankfurt-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "frankfurt-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Frankfurt-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Frankfurt-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Mumbai-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "mumbai-node-1.cloudwidecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Mumbai-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Mumbai-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Delhi-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "delhi-node-1.cloudwidecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Delhi-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Delhi-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Bangalore-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "bangalore-node-1.cloudwidecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Bangalore-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Bangalore-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Tel-Aviv-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "tel-aviv-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Tel-Aviv-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Tel-Aviv-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Tel-Aviv-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "tel-aviv-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Tel-Aviv-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Tel-Aviv-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Osaka-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "osaka-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Osaka-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Osaka-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Osaka-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "osaka-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Osaka-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Osaka-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Tokyo-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "tokyo-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Tokyo-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Tokyo-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Tokyo-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "tokyo-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Tokyo-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Tokyo-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Mexico-City-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "mexico-city-node-1.cloudwidecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Mexico-City-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Mexico-City-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Amsterdam-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "amsterdam-xray-2-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Amsterdam-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Amsterdam-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Amsterdam-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "amsterdam-xray-2-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Amsterdam-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Amsterdam-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Warsaw-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "warsaw-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Warsaw-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Warsaw-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Warsaw-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "warsaw-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Warsaw-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Warsaw-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Singapore-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "singapore-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Singapore-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Singapore-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Singapore-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "singapore-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Singapore-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Singapore-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Johannesburg-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "johannesburg-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Johannesburg-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Johannesburg-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Johannesburg-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "johannesburg-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Johannesburg-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Johannesburg-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Seoul-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "seoul-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Seoul-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Seoul-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Seoul-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "seoul-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Seoul-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Seoul-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Madrid-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "madrid-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Madrid-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Madrid-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Madrid-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "madrid-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Madrid-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Madrid-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Stockholm-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "stockholm-node-1.cloudwidecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Stockholm-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Stockholm-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Manchester-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "manchester-node-1.cloudwidecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Manchester-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Manchester-1"
+    }
+   }
+  },
+  {
+   "tag": "in-London-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "london-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "London-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-London-1"
+    }
+   }
+  },
+  {
+   "tag": "in-London-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "london-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "London-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-London-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Los-Angeles-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "los-angeles-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Los-Angeles-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Los-Angeles-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Los-Angeles-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "los-angeles-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Los-Angeles-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Los-Angeles-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Chicago-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "chicago-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Chicago-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Chicago-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Chicago-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "chicago-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Chicago-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Chicago-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Dallas-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "dallas-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Dallas-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Dallas-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Dallas-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "dallas-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Dallas-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Dallas-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Seattle-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "seattle-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Seattle-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Seattle-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Seattle-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "seattle-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Seattle-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Seattle-2"
+    }
+   }
+  },
+  {
+   "tag": "in-San-Francisco-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "san-francisco-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "San-Francisco-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-San-Francisco-1"
+    }
+   }
+  },
+  {
+   "tag": "in-San-Francisco-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "san-francisco-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "San-Francisco-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-San-Francisco-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Atlanta-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "atlanta-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Atlanta-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Atlanta-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Atlanta-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "atlanta-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Atlanta-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Atlanta-2"
+    }
+   }
+  },
+  {
+   "tag": "in-New-York-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "new-york-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "New-York-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "45.144.115.177",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-New-York-1"
+    }
+   }
+  },
+  {
+   "tag": "in-New-York-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "new-york-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "New-York-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "5.161.134.33",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-New-York-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Miami-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "miami-xray-1-1.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.cloudflare.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Miami-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.149.195.182",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Miami-1"
+    }
+   }
+  },
+  {
+   "tag": "in-Miami-2",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "miami-xray-1-2.cloudfreecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Miami-2",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "23.146.144.102",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Miami-2"
+    }
+   }
+  },
+  {
+   "tag": "in-Honolulu-1",
+   "protocol": "vless",
+   "settings": {
+    "vnext": [
+     {
+      "address": "honolulu-node-1.cloudwidecdn.com",
+      "port": 443,
+      "users": [
+       {
+        "id": "c122ef8c-c5bc-4b93-a970-e57d08074f3f",
+        "encryption": "none",
+        "flow": "xtls-rprx-vision"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "network": "tcp",
+    "security": "reality",
+    "realitySettings": {
+     "serverName": "www.apple.com",
+     "fingerprint": "chrome",
+     "publicKey": "UDdU43PqBu8dIOidPRiFMAZ05aSPj2Bl7S021n6ZqCg",
+     "shortId": "cb9cc59e66"
+    }
+   }
+  },
+  {
+   "tag": "Honolulu-1",
+   "protocol": "socks",
+   "settings": {
+    "servers": [
+     {
+      "address": "185.193.157.60",
+      "port": 12323,
+      "users": [
+       {
+        "user": "01M0D0XATW7F9BXYTM0Q4HAB4J",
+        "pass": "gWm3tGaU6fY8fsYn_country-us_skipispstatic-1"
+       }
+      ]
+     }
+    ]
+   },
+   "streamSettings": {
+    "sockopt": {
+     "dialerProxy": "in-Honolulu-1"
+    }
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom"
+  }
+ ],
+ "routing": {
+  "domainStrategy": "AsIs",
+  "balancers": [
+   {
+    "tag": "auto",
+    "selector": [
+     "Sydney-1",
+     "Sydney-2",
+     "Melbourne-1",
+     "Melbourne-2",
+     "Sao-Paulo-1",
+     "Sao-Paulo-2",
+     "Toronto-1",
+     "Toronto-2",
+     "Santiago-1",
+     "Paris-1",
+     "Paris-2",
+     "Frankfurt-1",
+     "Frankfurt-2",
+     "Mumbai-1",
+     "Delhi-1",
+     "Bangalore-1",
+     "Tel-Aviv-1",
+     "Tel-Aviv-2",
+     "Osaka-1",
+     "Osaka-2",
+     "Tokyo-1",
+     "Tokyo-2",
+     "Mexico-City-1",
+     "Amsterdam-1",
+     "Amsterdam-2",
+     "Warsaw-1",
+     "Warsaw-2",
+     "Singapore-1",
+     "Singapore-2",
+     "Johannesburg-1",
+     "Johannesburg-2",
+     "Seoul-1",
+     "Seoul-2",
+     "Madrid-1",
+     "Madrid-2",
+     "Stockholm-1",
+     "Manchester-1",
+     "London-1",
+     "London-2",
+     "Los-Angeles-1",
+     "Los-Angeles-2",
+     "Chicago-1",
+     "Chicago-2",
+     "Dallas-1",
+     "Dallas-2",
+     "Seattle-1",
+     "Seattle-2",
+     "San-Francisco-1",
+     "San-Francisco-2",
+     "Atlanta-1",
+     "Atlanta-2",
+     "New-York-1",
+     "New-York-2",
+     "Miami-1",
+     "Miami-2",
+     "Honolulu-1"
+    ],
+    "strategy": {
+     "type": "leastPing"
+    }
+   }
+  ],
+  "rules": [
+   {
+    "type": "field",
+    "network": "tcp,udp",
+    "balancerTag": "auto"
+   }
+  ]
+ },
+ "observatory": {
+  "subjectSelector": [
+   "Sydney-1",
+   "Sydney-2",
+   "Melbourne-1",
+   "Melbourne-2",
+   "Sao-Paulo-1",
+   "Sao-Paulo-2",
+   "Toronto-1",
+   "Toronto-2",
+   "Santiago-1",
+   "Paris-1",
+   "Paris-2",
+   "Frankfurt-1",
+   "Frankfurt-2",
+   "Mumbai-1",
+   "Delhi-1",
+   "Bangalore-1",
+   "Tel-Aviv-1",
+   "Tel-Aviv-2",
+   "Osaka-1",
+   "Osaka-2",
+   "Tokyo-1",
+   "Tokyo-2",
+   "Mexico-City-1",
+   "Amsterdam-1",
+   "Amsterdam-2",
+   "Warsaw-1",
+   "Warsaw-2",
+   "Singapore-1",
+   "Singapore-2",
+   "Johannesburg-1",
+   "Johannesburg-2",
+   "Seoul-1",
+   "Seoul-2",
+   "Madrid-1",
+   "Madrid-2",
+   "Stockholm-1",
+   "Manchester-1",
+   "London-1",
+   "London-2",
+   "Los-Angeles-1",
+   "Los-Angeles-2",
+   "Chicago-1",
+   "Chicago-2",
+   "Dallas-1",
+   "Dallas-2",
+   "Seattle-1",
+   "Seattle-2",
+   "San-Francisco-1",
+   "San-Francisco-2",
+   "Atlanta-1",
+   "Atlanta-2",
+   "New-York-1",
+   "New-York-2",
+   "Miami-1",
+   "Miami-2",
+   "Honolulu-1"
+  ],
+  "probeURL": "https://www.gstatic.com/generate_204",
+  "probeInterval": "3m",
+  "enableConcurrency": true
+ }
+}
