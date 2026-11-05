@@ -1,0 +1,48 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "proxy",
+      "server": "185.126.5.100",
+      "server_port": 39101,
+      "uuid": "00000000-0000-0000-0000-000161065843",
+      "tls": {
+        "enabled": true,
+        "server_name": "chatgpt.com",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "multiplex": {
+        "enabled": true,
+        "protocol": "yamux",
+        "max_connections": 4,
+        "max_streams": 8
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "final": "proxy"
+  }
+}
