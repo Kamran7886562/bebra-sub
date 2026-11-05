@@ -1,0 +1,76 @@
+FinalVPN (METAPHASE) — fleet inventory | @XBat_Team
+Status: fleet + free-tier record extracted & verified live 2026-11-05.
+Per-server connection configs are sealed inside an encrypted 'pxs' blob
+in the server response (custom libbox fork format) — no usable config
+could be recovered from outside; see REPORT.md for the full wall analysis.
+
+Shared endpoint for ALL servers: all.ircf.space:443 (TCP; UDP off on free tier)
+
+== Fleet (21 servers, from the app's own API, op=all) ==
+server.uk1       BEST           country=BB           id=1 status=1
+server.ar1       Argentina      country=Argentina    id=70 status=1
+server.au1       Australia      country=Australia    id=71 status=1
+server-ca1       Canada         country=Canada       id=56 status=1
+server-cn1       China HK       country=China        id=58 status=1
+server.eg1       Egypt          country=Egypt        id=73 status=1
+server-fr1       France         country=France       id=59 status=1
+server.de1       Germany        country=Germany      id=63 status=1
+server.in1       India          country=India        id=54 status=1
+server-ir1       Iran           country=Iran         id=191 status=1
+server-it1       Italy          country=Italy        id=67 status=1
+server.nl1       Netherlands    country=Netherlands  id=74 status=1
+server-ru1       Russia         country=Russia       id=68 status=1
+server-sp1       Spain          country=Spain        id=61 status=1
+server-tr1       Turkey         country=Turkey       id=52 status=1
+server.ae2       UAE            country=UAE          id=53 status=1
+server-us1       USA            country=USA          id=57 status=1
+server.uk2       UK             country=UK           id=151 status=1
+server-ua1       Ukraine        country=Ukraine      id=60 status=1
+server-jp1       Japan          country=Japan        id=55 status=1
+server.sg1       Singapore .    country=Singapore    id=165 status=1
+
+== Free tier detail record (what the API serves to a free device account) ==
+Every slug returns the same record: slug=server.uk1-free, name='BEST Free',
+message='Free week: unlimited for 7 more days', vpntype=SB (sing-box via libbox),
+hasTcp=true, hasUdp=false, port=443. Country selection lives INSIDE the
+single sealed config (outbound selector), not in separate per-country configs.
+
+== Edge endpoint tests (TCP/443, single tests + 1 retest, 2026-11-05) ==
+135.181.225.120              OK
+145.239.4.226                OK
+157.180.10.239               OK
+157.180.53.217               OK
+157.180.53.218               OK
+157.180.53.219               OK
+157.180.53.220               OK
+157.180.53.224               OK
+157.180.53.226               OK
+178.63.71.220                OK
+18.197.135.223               OK
+185.105.102.171              OK
+185.107.32.0                 OK
+185.118.12.19                OK
+194.39.248.34                OK
+213.156.152.167              OK
+46.245.107.0                 OK
+46.245.107.250               OK
+46.245.107.251               OK
+46.245.107.253               OK
+46.245.123.162               OK
+46.245.123.164               OK
+46.245.123.166               OK
+5.239.244.0                  OK
+51.89.164.250                OK
+65.108.99.169                OK
+65.109.102.37                OK
+65.109.74.105                OK
+65.109.75.116                OK
+79.127.69.0                  OK
+79.127.69.229                OK
+79.127.69.240                OK
+93.114.98.214                OK
+95.216.248.59                OK
+all.ircf.space (198.18.115.215) OK
+
+Note: all.ircf.space resolved via a fake-IP range inside the test network;
+its OK is a local-stack result. The 34 direct edge IPs passed independently.
