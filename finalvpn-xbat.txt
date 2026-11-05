@@ -1,0 +1,1 @@
+vless://00000000-0000-0000-0000-000161065843@185.126.5.100:39101?encryption=none&security=tls&sni=chatgpt.com&fp=chrome&allowInsecure=1&type=tcp#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20%40XBat_Team
